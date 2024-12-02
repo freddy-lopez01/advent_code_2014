@@ -1,3 +1,6 @@
+from typing import List
+
+
 def sort_data(fname: str) -> tuple([]):
     """
     sort_data(fname) takes in a file name and reads the contents of the file and formats the two integers on each line into two lists: list1 and list2
@@ -16,7 +19,7 @@ def sort_data(fname: str) -> tuple([]):
     return sorted(list1), sorted(list2)
 
 
-def calculate_distance(l1: list, l2: list) -> int:
+def calculate_distance(l1: list[int], l2: list[int]) -> int:
     """
     calculate_distance(l1, l2) takes in two lists and finds the difference between the two numbers in the same index of both lists. Then, to account for any possible negative evaluations, I take that diff
     and perform a abs() operation to ensure a positive result
@@ -30,6 +33,8 @@ def calculate_distance(l1: list, l2: list) -> int:
 
 def main():
     l1, l2 = sort_data("input.txt")
+    print(l1)
+    print(l2)
     res = calculate_distance(l1, l2)
     print(f"Final Distance: {res}")
 
